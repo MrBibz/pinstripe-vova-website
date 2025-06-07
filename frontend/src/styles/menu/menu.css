@@ -1,0 +1,21 @@
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em 2em;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    perspective: 2000px;
+    flex-wrap: wrap;
+    top: 3em;
+    width: 100%;
+}

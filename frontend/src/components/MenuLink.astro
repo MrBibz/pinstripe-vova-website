@@ -1,0 +1,11 @@
+---
+const { text, path } = Astro.props
+const currentPath = Astro.url.pathname;
+const isActive = currentPath === path;
+import '../styles/global.css';
+import '../styles/menu/menu-link.css';
+---
+
+<a href={path} class={`menu-link ${isActive ? 'active' : ''} kapakana-font`}>
+    {text}
+</a>

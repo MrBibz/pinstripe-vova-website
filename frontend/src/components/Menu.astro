@@ -1,0 +1,17 @@
+---
+import MenuLink from "./MenuLink.astro";
+import '../styles/menu/menu.css';
+
+const links = [
+    { text: "About", path: "about" },
+    { text: "Works", path: "#" },
+    { text: "Contact", path: "#" },
+    { text: "Bichofilia", path: "#" }
+];
+---
+
+<nav class="menu-container" aria-label="Main navigation">
+    {links.map(link => (
+            <MenuLink text={link.text} path={link.path} />
+    ))}
+</nav>
