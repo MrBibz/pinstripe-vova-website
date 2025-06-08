@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 .kapakana-font {
     font-family: "Kapakana", cursive;
@@ -6,3 +7,28 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.shadowed-text {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/*.shadowed-text {*/
+/*    color: #FFFFFF;*/
+/*    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7),*/
+/*    0 0 10px rgba(0, 0, 0, 0.6),*/
+/*    0 0 20px rgba(0, 0, 0, 0.5),*/
+/*    0 0 30px rgba(0, 0, 0, 0.3),*/
+/*    0 0 40px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*.shadowed-text {*/
+/*    color: #FFFFFF;*/
+/*    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8),*/
+/*    0 0 8px rgba(0, 0, 0, 0.6),*/
+/*    0 0 15px rgba(0, 0, 0, 0.5),*/
+/*    0 0 25px rgba(0, 0, 0, 0.3);*/
+/*}*/
+

@@ -1,9 +1,5 @@
 .menu-link {
     text-decoration: none;
-    color: #FFFFFF;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(0, 0, 0, 0.2),
-    0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .menu-link.active {
@@ -14,20 +10,20 @@
 /* Mobile */
 @media (max-width: 768px) {
     .menu-link {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
     .menu-link {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 }
 
 /* Desktop */
 @media (min-width: 1025px) {
     .menu-link {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 }
