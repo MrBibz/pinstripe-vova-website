@@ -1,0 +1,87 @@
+body {
+    background-color: white;
+}
+
+.bichofilia-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bichofilia-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    line-height: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.bichofilia-text {
+    margin-bottom: 0;
+    color: black;
+    font-size: 35px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.bichofilia-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bichofilia-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+
+/* RESPONSIVE STYLES */
+/* Mobile */
+@media (max-width: 768px) {
+    .bichofilia-container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .bichofilia-text-container,
+    .bichofilia-image-container {
+        flex: none;
+        width: 100%;
+    }
+
+    .bichofilia-text {
+        font-size: 35px;
+    }
+
+    .bichofilia-image {
+        transform: scale(1);
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bichofilia-text {
+        font-size: 35px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .bichofilia-text {
+        font-size: 35px;
+    }
+}

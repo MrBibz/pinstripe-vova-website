@@ -1,5 +1,6 @@
 ---
 import Menu from "../components/Menu.astro";
+import Modal from "../components/contact/MessageModal.astro";
 import '../styles/global.css';
 import '../styles/pages/contact.css';
 ---
@@ -18,7 +19,7 @@ import '../styles/pages/contact.css';
 
 <div class="contact-content">
     <p>
-        <a class="icon shadowed-text" title="Email">
+        <a id="email-button" class="icon shadowed-text" title="Email">
             <i class="fa-regular fa-envelope"></i>
         </a>
         <a class="icon shadowed-text" title="Instagram" href="https://www.instagram.com/pinstripevova/" target="_blank">
@@ -26,6 +27,38 @@ import '../styles/pages/contact.css';
         </a>
     </p>
 </div>
+
+<div id="email-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Contact Email</h2>
+
+        <form id="email-form">
+            <label for="from-email">Your Email:</label><br>
+            <input type="email" id="from-email" name="from-email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit" class="send-button">Send</button>
+            <button type="button" id="cancel-button" class="cancel-button">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<Modal
+        id="success-modal"
+        title="Success!"
+        message="Your message has been sent successfully!"
+        onCloseClass="close-success"
+/>
+
+<Modal
+        id="error-modal"
+        title="Error"
+        message="There was an error sending your message. Please try again."
+        onCloseClass="close-error"
+/>
 
 <script type="module" src="/scripts/pages/contact.js"></script>
 </body>

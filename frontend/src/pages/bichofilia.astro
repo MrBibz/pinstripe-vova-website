@@ -1,0 +1,48 @@
+---
+import Menu from "../components/Menu.astro";
+import '../styles/pages/bichofilia.css';
+import '../styles/global.css';
+import bichofilia_image from "../assets/shrek.jpg";
+import BichofiliaParagraph from "../components/bichofilia/BichofiliaParagraph.astro";
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Bichofilia - Pinstripe Vova</title>
+</head>
+<body>
+<Menu/>
+<div class="bichofilia-container">
+    <div class="bichofilia-text-container kapakana-font">
+        <BichofiliaParagraph
+                text="In English, the word ‘Bicho’ would be translated to ‘Bug’ : an insect of a large order distinguished by having mouthparts that are modified for piercing and sucking."
+        />
+        <BichofiliaParagraph
+                text="Note that, if we use that same word as a verb it means : to annoy or bother (someone)"
+        />
+        <BichofiliaParagraph
+                text="Philia : denoting fondness, especially an abnormal love for a specified thing."
+        />
+        <BichofiliaParagraph
+                text="With this etymological proposal, the literal meaning is “love for insects”… I give it a double-entendre, as if it were a paraphilia. A morbid feeling that bichos can cause, since many people don’t like insects as they can cause fear/anxiety."
+        />
+        <BichofiliaParagraph
+                text="Picture this: you’re sleeping in your bed and are trying to get some rest. You get woken up by the feeling of a sting/bite. You panic and turn on the flashlight on your phone to look for the bug. You can’t seem to find it but you know it’s there. This feeling stays, haunts you every night and never goes…"
+        />
+        <BichofiliaParagraph
+                text="When you get used to the discomfort you feel restless when it’s not there anymore, maybe it’s cynism or maybe it is that you don’t trust any sense of comfort anymore."
+        />
+        <BichofiliaParagraph
+                text="The intent is to express that obsessive feeling that I have with my ‘bichos’. That discomfort that I seek morbidly and that I can’t explain… perhaps with the simple purpose of giving it meaning."
+        />
+    </div>
+    <div class="bichofilia-image-container">
+        <img src={bichofilia_image.src} alt="Shrek" class="bichofilia-image"/>
+    </div>
+</div>
+</body>
+</html>

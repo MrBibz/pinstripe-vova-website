@@ -1,0 +1,11 @@
+---
+const { id, title, message, onCloseClass = '', isVisible = false } = Astro.props;
+---
+
+<div id={id} class="modal" style={`display: ${isVisible ? 'block' : 'none'};`}>
+    <div class="modal-content">
+        <span class="close-button {onCloseClass}">&times;</span>
+        <h2>{title}</h2>
+        <p>{message}</p>
+    </div>
+</div>

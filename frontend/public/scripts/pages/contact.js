@@ -42,4 +42,70 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.style.backgroundColor = randomColor();
         grid.appendChild(cell);
     }
+
+    const modal = document.getElementById('email-modal');
+    const emailButton = document.getElementById('email-button');
+    const closeButton = modal.querySelector('.close-button');
+    const cancelButton = document.getElementById('cancel-button');
+    const form = document.getElementById('email-form');
+
+    const successModal = document.getElementById('success-modal');
+    const errorModal = document.getElementById('error-modal');
+    const closeModalButtons = document.querySelectorAll('.close-modal');
+
+    emailButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    cancelButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.closest('.modal').style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const fromEmail = document.getElementById('from-email').value;
+        const message = document.getElementById('message').value;
+
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ fromEmail, message })
+            });
+
+            const data = await response.json();
+
+            form.reset();
+            modal.style.display = 'none';
+
+            if (data.success) {
+                successModal.style.display = 'block';
+            } else {
+                errorModal.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            modal.style.display = 'none';
+            errorModal.style.display = 'block';
+        }
+    });
 });
